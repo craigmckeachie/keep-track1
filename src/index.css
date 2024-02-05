@@ -115,6 +115,11 @@ meter {
   display: none;
 }
 
+
+input[type="checkbox"],
+input[type="radio"] {
+    all: revert;
+}
 /*end reset */
 
 body {
@@ -123,7 +128,7 @@ body {
   color: #111827;
 }
 
-a:hover{
+a:hover {
   text-decoration: underline;
 }
 
@@ -286,10 +291,10 @@ button,
 
 .card-large {
   width: 36rem;
-  font-size: 1.6rem; 
+  font-size: 1.6rem;
 }
 
-.card-large img{
+.card-large img {
   width: 36rem;
 
   height: auto;
@@ -308,16 +313,14 @@ button,
   color: #4b5563;
 }
 
-
-.card-large  .text-secondary {
+.card-large .text-secondary {
   font-size: 1.2rem;
- 
 }
 
-mark.active{
-  background-color: #302ECB;
+mark.active {
+  background-color: #302ecb;
   color: white;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 #messageDiv {
