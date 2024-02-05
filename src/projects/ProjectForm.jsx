@@ -67,7 +67,15 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
     <div className="card">
       <form className="" onSubmit={handleSubmit}>
         <label htmlFor="name">Project Name</label>
-        <input type="text" name="name" placeholder="enter name" value={project.name} onChange={handleChange} />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="enter name"
+          value={project.name}
+          onChange={handleChange}
+          autoComplete="off"
+        />
         {errors.name.length > 0 && (
           <div className="card error">
             <p>{errors.name}</p>
@@ -75,6 +83,7 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
         )}
         <label htmlFor="description">Project Description</label>
         <textarea
+          id="description"
           name="description"
           placeholder="enter description"
           value={project.description}
@@ -88,18 +97,25 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
         )}
 
         <label htmlFor="budget">Project Budget</label>
-        <input type="number" name="budget" placeholder="enter budget" value={project.budget} onChange={handleChange} />
+        <input
+          type="number"
+          id="budget"
+          name="budget"
+          placeholder="enter budget"
+          value={project.budget}
+          onChange={handleChange}
+        />
         {errors.budget.length > 0 && (
           <div className="card error">
             <p>{errors.budget}</p>
           </div>
         )}
         <label htmlFor="isActive">Active?</label>
-        <input type="checkbox" name="isActive" checked={project.isActive} onChange={handleChange} />
+        <input type="checkbox" id="isActive" name="isActive" checked={project.isActive} onChange={handleChange} />
         <div className="actions">
           <button className="primary bordered medium">Save</button>
           <span />
-          <a  onClick={onCancel}>cancel</a>
+          <a onClick={onCancel}>cancel</a>
         </div>
       </form>
     </div>
