@@ -3,7 +3,6 @@ import "./App.css";
 import ProjectsPage from "./projects/ProjectsPage.jsx";
 import ProjectPage from "./projects/ProjectPage.jsx";
 
-
 import { BrowserRouter as Router, Route, NavLink, Routes } from "react-router-dom";
 import HomePage from "./home/HomePage";
 

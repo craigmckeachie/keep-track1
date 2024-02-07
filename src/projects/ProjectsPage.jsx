@@ -48,7 +48,7 @@ function ProjectsPage() {
   return (
     <>
       <h1>Projects</h1>
-      <section className="panel">
+      <section className="panel architect-background">
         {error && (
           <div className="row">
             <div className="card large error">
