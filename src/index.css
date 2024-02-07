@@ -125,6 +125,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   color: #111827;
+  /* background-color: #f5f8fc; */
 }
 
 p {
@@ -139,7 +140,7 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* background-color: #f5f8fc; */
+  background-color: #f5f8fc;
 }
 
 #logo-35 {
@@ -199,10 +200,14 @@ input,
 textarea,
 select {
   padding: 0.4rem;
-  color: #111827;
   color: #4b5563;
-  background-color: #f5f5f5;
-  border: 1px solid #111827;
+  border: 1px solid #4b5563;
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+}
+
+textarea {
+  height: 4rem;
 }
 
 input[type="checkbox"] {
@@ -238,8 +243,9 @@ a {
   justify-content: flex-start;
   gap: 0.4rem;
   align-items: center;
-  border-top: 0.25px solid #4b5563;
-  padding-top: 1rem;
+  border-top: .1px solid #4b5563;
+  padding-top: 1.4rem;
+
 }
 
 .center {
