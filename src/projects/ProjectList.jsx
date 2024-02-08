@@ -19,7 +19,7 @@ function ProjectList({ projects, onSave }) {
   return (
     <div className="list">
       {projects.map((project) => (
-        <div key={project.id} className="cols-sm">
+        <div key={project.id}>
           {project === projectBeingEdited ? (
             <ProjectForm project={project} onSave={onSave} onCancel={cancelEditing} />
           ) : (

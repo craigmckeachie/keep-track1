@@ -12,7 +12,7 @@
     },
     {
       "id": "2",
-      "name": "Dillesik LLCs",
+      "name": "Dillesik LLC",
       "description": "Re-contextualized dynamic moratorium. Aut nulla soluta numquam qui dolor architecto et facere dolores.",
       "imageUrl": "/assets/placeimg_500_300_arch12.jpg",
       "contractTypeId": 6,
@@ -63,7 +63,7 @@
     {
       "id": "7",
       "name": "Christiansen LLC",
-      "description": "Customer-focused composite implementation. Rerum ullam est voluptate hic eligendi autem rerum cum et.",
+      "description": "Customer-focused composite implement. Rerum ullam est voluptate hic eligendi autem rerum cum et.",
       "imageUrl": "/assets/placeimg_500_300_arch9.jpg",
       "contractTypeId": 3,
       "contractSignedOn": "2015-04-14T19:46:53.146Z",
@@ -948,7 +948,7 @@
       "contractTypeId": 2,
       "contractSignedOn": "2010-09-24T21:02:41.601Z",
       "budget": 38853,
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "97",

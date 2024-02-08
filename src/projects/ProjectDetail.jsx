@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectDetail({ project }) {
   return (
-    <section className="panel architect-background">
+    <section className="panel">
       <div className="card card-large ">
         <img className="rounded" src={project.imageUrl} alt={project.name} />
         <section>

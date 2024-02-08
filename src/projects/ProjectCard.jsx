@@ -15,7 +15,7 @@ function ProjectCard(props) {
   return (
     <div className="card">
       <img src={project.imageUrl} alt={project.name} />
-      <section className="section dark">
+      <section>
         <h5>
           <Link to={"/projects/" + project.id}>{project.name}</Link>
         </h5>
@@ -26,7 +26,6 @@ function ProjectCard(props) {
             handleEditClick(project);
           }}
         >
-          <span className="icon-edit "></span>
           Edit
         </button>
       </section>

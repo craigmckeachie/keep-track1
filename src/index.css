@@ -47,6 +47,11 @@ summary {
 img {
   max-inline-size: 100%;
   max-block-size: 100%;
+  /* shape-margin: 0.75rem;
+  background-size: cover;
+  vertical-align: middle;
+  height: auto;
+  max-width: 100%; */
 }
 
 /* removes spacing between cells in tables */
@@ -148,7 +153,7 @@ header {
   display: flex;
   align-items: center;
   gap: 2rem;
-  /* background-color: #f5f8fc; */
+  background-color: #f5f8fc;
 }
 
 #logo-35 {
@@ -239,8 +244,10 @@ input[type="checkbox"] {
 button,
 .button {
   background-color: white;
-  color: #111827;
-  border: 1px solid #111827;
+  /* color: #111827;
+  border: 1px solid #111827; */
+  color: #4b5563;
+  border: 1px solid #4b5563;
   padding-block: 0.5rem;
   padding-inline: 1rem;
   text-decoration: none;
@@ -257,6 +264,7 @@ a {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23302ecb' fill-opacity='0.09'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
   background-repeat: none;
   background-color: transparent;
+  margin-top: 2rem;
 }
 
 .pattern-1 {
@@ -267,6 +275,40 @@ a {
   height: 46rem;
   background-color: transparent;
   /* z-index: -1; */
+}
+
+.skeleton {
+  animation: skeleton-loading 0.8s linear infinite alternate;
+}
+
+/* @keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+} */
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 0%, 94%);
+  }
+  100% {
+    background-color: hsl(0, 0%, 110%);
+  }
+}
+
+.skeleton-text {
+  width: 24ch;
+  height: 1.2rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+button.skeleton {
+  width: 62px;
+  height: 38px;
 }
 
 .primary {
@@ -305,8 +347,6 @@ a {
 }
 
 .panel {
-  display: flex;
-  gap: 4rem;
   background-color: #f5f8fc;
   padding-inline: 2rem;
   padding-block: 2rem;
@@ -329,7 +369,7 @@ a {
   flex-direction: column;
   border: 1px solid #cbd5e1;
   background-color: #fafafa;
-  box-shadow: 0.05rem 0.05rem #f5f5f5;
+  box-shadow: 0.5px 1px lightgrey;
   gap: 2rem;
   width: 20rem;
   border-radius: 0.4rem;
@@ -361,7 +401,7 @@ a {
 .card-large {
   width: fit-content;
   font-size: 1.6rem;
-  /* border-top: 5px solid var(--accent-color-1); */
+  border-top: 5px solid var(--accent-color-1);
 }
 
 .card-large img {

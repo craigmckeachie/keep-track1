@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ProjectList from "./ProjectList";
+import ProjectCardSkeleton from "./ProjectCardSkeleton";
 import { projectAPI } from "./projectAPI";
 import { Project } from "./Project";
 
@@ -8,6 +9,7 @@ function ProjectsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(undefined);
   const [currentPage, setCurrentPage] = useState(1);
+  const skeletonCards = [...Array(15).keys()]
 
   useEffect(() => {
     async function loadProjects() {
@@ -48,7 +50,7 @@ function ProjectsPage() {
   return (
     <>
       <h1>Projects</h1>
-      <section className="panel architect-background">
+      <section className="panel">
         {error && (
           <div className="row">
             <div className="card large error">
@@ -72,10 +74,11 @@ function ProjectsPage() {
           </div>
         )}
 
-        {loading && (
-          <div className="center-page">
-            <span className="spinner primary"></span>
-            <p>Loading...</p>
+        {true && (
+          <div className="list">
+            {skeletonCards.map((card) => (
+              <ProjectCardSkeleton key={card}></ProjectCardSkeleton>
+            ))}
           </div>
         )}
       </section>
