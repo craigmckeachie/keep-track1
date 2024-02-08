@@ -52,7 +52,7 @@ function ProjectsPage() {
       <h1>Projects</h1>
       <section className="panel">
         {error && (
-          <div className="toast-top alert error">
+          <div className="toast-top alert">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width={20} height={20}>
               <path
                 fillRule="evenodd"
