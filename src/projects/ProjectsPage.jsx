@@ -9,7 +9,7 @@ function ProjectsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(undefined);
   const [currentPage, setCurrentPage] = useState(1);
-  const skeletonCards = [...Array(15).keys()]
+  const skeletonCards = [...Array(15).keys()];
 
   useEffect(() => {
     async function loadProjects() {
@@ -74,7 +74,7 @@ function ProjectsPage() {
           </div>
         )}
 
-        {true && (
+        {loading && (
           <div className="list">
             {skeletonCards.map((card) => (
               <ProjectCardSkeleton key={card}></ProjectCardSkeleton>
