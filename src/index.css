@@ -202,6 +202,40 @@ h5 {
   font-weight: 600;
 }
 
+.toast-top {
+  position: fixed;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, -50%);
+}
+
+/* .toast-bottom {
+  position: fixed;
+  left: 1rem;
+  bottom: 2rem;
+  /* transform: translate(-50%, -50%); 
+} */
+
+.alert {
+  display: flex;
+  gap: 1rem;
+  /* align-items: center; */
+  /* justify-content: center; */
+  border: 1px solid #cbd5e1;
+  border: 1px solid #4b5563;
+  background-color: #fafafa;
+  background-color: var(--accent-color-2);
+  color: white;
+  box-shadow: 0.5px 1px lightgrey;
+  border-radius: 0.4rem;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  width: fit-content;
+
+  /* border-left: 1rem solid #4b5563; */
+  /* font-weight: 800; */
+}
+
 .card form {
   display: flex;
   flex-direction: column;
