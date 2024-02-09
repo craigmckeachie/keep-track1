@@ -9,7 +9,13 @@ function ProjectsPage() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(undefined);
   const [currentPage, setCurrentPage] = useState(1);
+  const [message, setMessage] = useState(null);
   const skeletonCards = [...Array(15).keys()];
+
+  function toast(message, type) {
+    setMessage(message);
+    setTimeout(() => setMessage(null), 2200);
+  }
 
   useEffect(() => {
     async function loadProjects() {
@@ -42,6 +48,7 @@ function ProjectsPage() {
           return p.id === project.id ? new Project(updatedProject) : p;
         });
         setProjects(updatedProjects);
+        toast("Successfully Saved");
       })
       .catch((e) => {
         setError(e.message);
@@ -51,8 +58,10 @@ function ProjectsPage() {
     <>
       <h1>Projects</h1>
       <section className="panel">
+        {message && <div className="toast-top alert">{message}</div>}
+
         {error && (
-          <div className="toast-top alert">
+          <div className=" alert">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width={20} height={20}>
               <path
                 fillRule="evenodd"

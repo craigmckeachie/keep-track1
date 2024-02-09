@@ -317,12 +317,21 @@ a {
   }
 } */
 
-@keyframes skeleton-loading {
+/* @keyframes skeleton-loading {
   0% {
     background-color: hsl(0, 0%, 94%);
   }
   100% {
     background-color: hsl(0, 0%, 110%);
+  }
+} */
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsla(215, 14%, 34%, 0.511);
+  }
+  100% {
+    background-color: hsl(215, 14%, 44%);
   }
 }
 
@@ -350,7 +359,7 @@ button.skeleton {
   justify-content: flex-start;
   gap: 0.4rem;
   align-items: center;
-  border-top: 0.1px solid #4b5563;
+  border-top: 1px solid lightgray;
   padding-top: 1.4rem;
 }
 
