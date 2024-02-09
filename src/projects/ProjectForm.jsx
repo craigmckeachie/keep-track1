@@ -76,11 +76,7 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
           onChange={handleChange}
           autoComplete="off"
         />
-        {errors.name.length > 0 && (
-          <div className="card error">
-            <p>{errors.name}</p>
-          </div>
-        )}
+        {errors.name.length > 0 && <div className="alert error">{errors.name}</div>}
         <label htmlFor="description">Project Description</label>
         <textarea
           id="description"
@@ -90,11 +86,7 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
           onChange={handleChange}
           rows=""
         />
-        {errors.description.length > 0 && (
-          <div className="card error">
-            <p>{errors.description}</p>
-          </div>
-        )}
+        {errors.description.length > 0 && <div className="alert error">{errors.description}</div>}
 
         <label htmlFor="budget">Project Budget</label>
         <input
@@ -105,11 +97,7 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
           value={project.budget}
           onChange={handleChange}
         />
-        {errors.budget.length > 0 && (
-          <div className="card error">
-            <p>{errors.budget}</p>
-          </div>
-        )}
+        {errors.budget.length > 0 && <div className="card error">{errors.budget}</div>}
         <label htmlFor="isActive">Active?</label>
         <input type="checkbox" id="isActive" name="isActive" checked={project.isActive} onChange={handleChange} />
         <div className="actions">

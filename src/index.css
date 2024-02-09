@@ -221,6 +221,10 @@ h5 {
   width: fit-content;
 }
 
+.error{
+  background-color: #dc2626;
+}
+
 .card form {
   display: flex;
   flex-direction: column;
