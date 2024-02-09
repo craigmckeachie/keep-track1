@@ -12,7 +12,7 @@ function ProjectsPage() {
   const [message, setMessage] = useState(null);
   const skeletonCards = [...Array(15).keys()];
 
-  function toast(message, type) {
+  function toast(message) {
     setMessage(message);
     setTimeout(() => setMessage(null), 2200);
   }
@@ -58,10 +58,10 @@ function ProjectsPage() {
     <>
       <h1>Projects</h1>
       <section className="panel">
-        {message && <div className="toast-top alert">{message}</div>}
+        {message && <div className="toast-top alert fade-in">{message}</div>}
 
         {error && (
-          <div className=" alert">
+          <div className="toast-top alert fade-in">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width={20} height={20}>
               <path
                 fillRule="evenodd"
@@ -69,7 +69,6 @@ function ProjectsPage() {
                 clipRule="evenodd"
               />
             </svg>
-
             {error}
           </div>
         )}

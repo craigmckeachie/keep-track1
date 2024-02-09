@@ -26,7 +26,7 @@ function App() {
           <NavLink to="/projects/">Projects</NavLink>
         </nav>
       </header>
-      <main className="architect-background1">
+      <main className="architect-background">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
