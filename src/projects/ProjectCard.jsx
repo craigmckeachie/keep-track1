@@ -13,7 +13,7 @@ function ProjectCard(props) {
     onEdit(projectBeingEdited);
   };
   return (
-    <div className="card">
+    <div className="card flip-in-ver-left">
       <img src={project.imageUrl} alt={project.name} />
       <section>
         <h5>

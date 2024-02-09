@@ -64,7 +64,7 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
   }
 
   return (
-    <div className="card">
+    <div className="card flip-in-ver-right">
       <form className="" onSubmit={handleSubmit}>
         <label htmlFor="name">Project Name</label>
         <input
