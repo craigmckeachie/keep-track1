@@ -5,3 +5,13 @@
 - api at root
 - change title in index.html
 - favicon? in index.html
+
+card
+
+- out from right
+- in from left
+
+form
+
+- in from right
+  -out to left

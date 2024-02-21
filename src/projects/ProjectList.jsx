@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { Project } from "./Project";
 import ProjectCard from "./ProjectCard";
@@ -6,6 +6,15 @@ import ProjectForm from "./ProjectForm";
 
 function ProjectList({ projects, onSave }) {
   const [projectBeingEdited, setProjectBeingEdited] = useState({});
+  const isInitialMount = useRef(true);
+
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      // Your useEffect code here to be run on update
+    }
+  });
 
   const handleEdit = (project) => {
     setProjectBeingEdited(project);
@@ -23,7 +32,7 @@ function ProjectList({ projects, onSave }) {
           {project === projectBeingEdited ? (
             <ProjectForm project={project} onSave={onSave} onCancel={cancelEditing} />
           ) : (
-            <ProjectCard project={project} onEdit={handleEdit} />
+            <ProjectCard project={project} onEdit={handleEdit} enableExitAnimation={isInitialMount.current} />
           )}
         </div>
       ))}

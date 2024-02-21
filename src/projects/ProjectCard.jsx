@@ -8,10 +8,15 @@ function formatDescription(description) {
 }
 
 function ProjectCard(props) {
-  const { project, onEdit } = props;
+  const { project, onEdit, enableExitAnimation } = props;
   const handleEditClick = (projectBeingEdited) => {
     onEdit(projectBeingEdited);
   };
+  // let classNames = "card";
+  // if (enableExitAnimation) {
+  //   classNames += "flip-in-ver-left";
+  // }
+
   return (
     <div className="card flip-in-ver-left">
       <img src={project.imageUrl} alt={project.name} />

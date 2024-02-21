@@ -513,7 +513,7 @@ mark.active {
 }
 
 .flip-in-ver-right {
-	animation: flip-in-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: flip-in-ver-right 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes flip-in-ver-right {
@@ -529,7 +529,7 @@ mark.active {
 
 
 .flip-in-ver-left {
-	animation: flip-in-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: flip-in-ver-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 @keyframes flip-in-ver-left {
