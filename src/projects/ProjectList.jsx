@@ -19,7 +19,7 @@ function ProjectList({ projects, onSave }) {
   return (
     <div className="list">
       {projects.map((project) => (
-        <div key={project.id} className="flip-card ">
+        <div key={project.id} className="flip-card  ">
           <div className="flip-card-inner card">
             <div className="flip-card-front">
               <ProjectCard project={project} onEdit={handleEdit} />

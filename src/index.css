@@ -401,6 +401,7 @@ button.skeleton {
   box-shadow: 0.5px 1px lightgrey;
   gap: 2rem;
   width: 20rem;
+  height: 100%;
   border-radius: 0.4rem;
 }
 
@@ -548,6 +549,7 @@ mark.active {
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   /* width: 330px; */
   height: 400px;
+
 }
 
 /* This container is needed to position the front and back side */
@@ -564,7 +566,6 @@ mark.active {
   transform: rotateY(180deg);
 }
 
-
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
@@ -573,6 +574,7 @@ mark.active {
   /* height: 100%; */
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  /* border: 1px solid #cbd5e1; */
 }
 
 /* Style the front side (fallback if image is missing) */
