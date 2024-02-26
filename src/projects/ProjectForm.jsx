@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
-import { Project } from "./Project";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Project } from './Project';
 
 function ProjectForm({ project: initialProject, onSave, onCancel }) {
   const [project, setProject] = useState(initialProject);
   const [errors, setErrors] = useState({
-    name: "",
-    description: "",
-    budget: "",
+    name: '',
+    description: '',
+    budget: '',
   });
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,10 +19,10 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
     const { type, name, value, checked } = event.target;
     // if input type is checkbox use checked
     // otherwise it's type is text, number etc. so use value
-    let updatedValue = type === "checkbox" ? checked : value;
+    let updatedValue = type === 'checkbox' ? checked : value;
 
     //if input type is number convert the updatedValue string to a +number
-    if (type === "number") {
+    if (type === 'number') {
       updatedValue = Number(updatedValue);
     }
     const change = {
@@ -43,28 +43,32 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
   }
 
   function validate(project) {
-    let errors = { name: "", description: "", budget: "" };
+    let errors = { name: '', description: '', budget: '' };
     if (project.name.length === 0) {
-      errors.name = "Name is required";
+      errors.name = 'Name is required';
     }
     if (project.name.length > 0 && project.name.length < 3) {
-      errors.name = "Name needs to be at least 3 characters.";
+      errors.name = 'Name needs to be at least 3 characters.';
     }
     if (project.description.length === 0) {
-      errors.description = "Description is required.";
+      errors.description = 'Description is required.';
     }
     if (project.budget === 0) {
-      errors.budget = "Budget must be more than $0.";
+      errors.budget = 'Budget must be more than $0.';
     }
     return errors;
   }
 
   function isValid() {
-    return errors.name.length === 0 && errors.description.length === 0 && errors.budget.length === 0;
+    return (
+      errors.name.length === 0 &&
+      errors.description.length === 0 &&
+      errors.budget.length === 0
+    );
   }
 
   return (
-    <div className="card flip-in-ver-right">
+   
       <form className="" onSubmit={handleSubmit}>
         <label htmlFor="name">Project Name</label>
         <input
@@ -76,7 +80,9 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
           onChange={handleChange}
           autoComplete="off"
         />
-        {errors.name.length > 0 && <div className="alert error">{errors.name}</div>}
+        {errors.name.length > 0 && (
+          <div className="alert error">{errors.name}</div>
+        )}
         <label htmlFor="description">Project Description</label>
         <textarea
           id="description"
@@ -86,7 +92,9 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
           onChange={handleChange}
           rows=""
         />
-        {errors.description.length > 0 && <div className="alert error">{errors.description}</div>}
+        {errors.description.length > 0 && (
+          <div className="alert error">{errors.description}</div>
+        )}
 
         <label htmlFor="budget">Project Budget</label>
         <input
@@ -97,16 +105,24 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
           value={project.budget}
           onChange={handleChange}
         />
-        {errors.budget.length > 0 && <div className="card error">{errors.budget}</div>}
+        {errors.budget.length > 0 && (
+          <div className="card error">{errors.budget}</div>
+        )}
         <label htmlFor="isActive">Active?</label>
-        <input type="checkbox" id="isActive" name="isActive" checked={project.isActive} onChange={handleChange} />
+        <input
+          type="checkbox"
+          id="isActive"
+          name="isActive"
+          checked={project.isActive}
+          onChange={handleChange}
+        />
         <div className="actions">
           <button className="primary bordered medium">Save</button>
           <span />
           <a onClick={onCancel}>cancel</a>
         </div>
       </form>
-    </div>
+    
   );
 }
 
