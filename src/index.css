@@ -221,7 +221,8 @@ h5 {
 }
 
 .error {
-  background-color: #dc2626;
+  font-size: 0.8rem;
+  color: red;
 }
 
 form {
@@ -251,6 +252,12 @@ input:focus,
 textarea:focus,
 select:focus {
   border: 2px solid grey;
+}
+
+input:has(+ .error),
+textarea:has(+ .error),
+select:has(+ .error) {
+  border: 2px solid red;
 }
 
 textarea {
@@ -334,7 +341,7 @@ button.skeleton {
   gap: 0.4rem;
   align-items: center;
   border-top: 1px solid lightgray;
-  padding-top: 1.4rem;
+  padding-top: .6rem;
 }
 
 .center {

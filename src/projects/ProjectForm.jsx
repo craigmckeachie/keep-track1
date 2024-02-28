@@ -45,7 +45,7 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
   function validate(project) {
     let errors = { name: '', description: '', budget: '' };
     if (project.name.length === 0) {
-      errors.name = 'Name is required';
+      errors.name = 'Name is required.';
     }
     if (project.name.length > 0 && project.name.length < 3) {
       errors.name = 'Name needs to be at least 3 characters.';
@@ -68,61 +68,57 @@ function ProjectForm({ project: initialProject, onSave, onCancel }) {
   }
 
   return (
-   
-      <form className="" onSubmit={handleSubmit}>
-        <label htmlFor="name">Project Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="enter name"
-          value={project.name}
-          onChange={handleChange}
-          autoComplete="off"
-        />
-        {errors.name.length > 0 && (
-          <div className="alert error">{errors.name}</div>
-        )}
-        <label htmlFor="description">Project Description</label>
-        <textarea
-          id="description"
-          name="description"
-          placeholder="enter description"
-          value={project.description}
-          onChange={handleChange}
-          rows=""
-        />
-        {errors.description.length > 0 && (
-          <div className="alert error">{errors.description}</div>
-        )}
+    <form className="" onSubmit={handleSubmit}>
+      <label htmlFor="name">Project Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="enter name"
+        value={project.name}
+        onChange={handleChange}
+        autoComplete="off"
+      />
+      {errors.name.length > 0 && <div className="error">{errors.name}</div>}
+      <label htmlFor="description">Project Description</label>
+      <textarea
+        id="description"
+        name="description"
+        placeholder="enter description"
+        value={project.description}
+        onChange={handleChange}
+        rows=""
+      />
+      {errors.description.length > 0 && (
+        <div className="error">{errors.description}</div>
+      )}
 
-        <label htmlFor="budget">Project Budget</label>
-        <input
-          type="number"
-          id="budget"
-          name="budget"
-          placeholder="enter budget"
-          value={project.budget}
-          onChange={handleChange}
-        />
-        {errors.budget.length > 0 && (
-          <div className="card error">{errors.budget}</div>
-        )}
-        <label htmlFor="isActive">Active?</label>
-        <input
-          type="checkbox"
-          id="isActive"
-          name="isActive"
-          checked={project.isActive}
-          onChange={handleChange}
-        />
-        <div className="actions">
-          <button className="primary bordered medium">Save</button>
-          <span />
-          <a onClick={onCancel}>cancel</a>
-        </div>
-      </form>
-    
+      <label htmlFor="budget">Project Budget</label>
+      <input
+        type="number"
+        id="budget"
+        name="budget"
+        placeholder="enter budget"
+        value={project.budget}
+        onChange={handleChange}
+      />
+      {errors.budget.length > 0 && (
+        <div className="card error">{errors.budget}</div>
+      )}
+      <label htmlFor="isActive">Active?</label>
+      <input
+        type="checkbox"
+        id="isActive"
+        name="isActive"
+        checked={project.isActive}
+        onChange={handleChange}
+      />
+      <div className="actions">
+        <button className="primary bordered medium">Save</button>
+        <span />
+        <a onClick={onCancel}>cancel</a>
+      </div>
+    </form>
   );
 }
 
